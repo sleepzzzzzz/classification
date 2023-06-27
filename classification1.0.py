@@ -181,7 +181,7 @@ def main(args, exp_config, train_set, val_set, test_set):
 
             if early_stop:
                 break
-    stopper.load_checkpoint(model)
+            stopper.load_checkpoint(model)
     # Test
     test_score, tfpr = run_a_test_epoch(args, model, test_loader)
     print('test {} {}'.format(args['metric'], test_score))
